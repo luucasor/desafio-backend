@@ -35,7 +35,7 @@ API REST utilizando framework Phalcon PHP.
 - Caso você tenha o Apache, Nginx ou outro servidor rodando na sua máquina, certifique-se de que não esteja utilizando a porta `8000`.
 - Url do projeto: `localhost:8000`.
 - A configuração de host virtual está no arquivo `vagrant/config/nginx/conf.d/desafio-backend.conf`. Você pode alterá-lo para a configuração que achar melhor, se assim desejar.
-- No arquivo `vagrant/config.yaml` existe a configuração `projects-folder: "/www"`. Onde `/www` é o diretório que contém o projeto `desafio-backend`. No seu caso, provavelmente o diretório será outro. Altere o `/www` para o diretório da sua máquina.
+- No arquivo `vagrant/config.yaml` existe a configuração `projects-folder: "/www"`. Onde `/www` é o caminho que contém o diretório `desafio-backend`. No seu caso, provavelmente o diretório será outro. Altere o `/www` para o diretório da sua máquina. (Ex: Se o o projeto, na sua máquina, fica em `/home/usuario/projetos/desafio-backend`, então você vai substituir o `/www` por `/home/usuario/projetos`)
 - Banco de dados:
   - Usuário: `root`
   - Senha: `admin`

@@ -1,6 +1,9 @@
 # Desafio backend: Vagrant / PHP / Phalcon Framework
 
-E aí, beleza? Se você está querendo trabalhar em um ambiente descontraído, fazendo o que gosta e compartilhando conhecimento, este desafio é pra você! :)
+#### Antes de tudo...
+
+Este teste é voltado para desenvolvedores que têm interesse em trabalhar na [AgenciaSys](http://www.agenciasys.com/),
+então... se você está querendo trabalhar em um ambiente descontraído, fazendo o que gosta e compartilhando conhecimento, este desafio é pra você! :)
 
 #### Objetivo:
 Desenvolver uma API REST para uma aplicação de Agenda de Compromissos.

@@ -7,4 +7,4 @@
     ram: 512
     cpus: 1
     gui: false
-    projects-folder: "/www"
+    projects-folder: "/home/lreis/Projetos"

@@ -1,0 +1,38 @@
+<?php
+
+use Phalcon\Mvc\Controller;
+
+class CompromissoController extends Controller
+{
+
+    function __construct()
+    {
+      parent::__construct();
+    }
+
+    //função apenas para testes, REMOVER
+    public function on()
+    {
+        echo "<h1>Funcionando, parabéns!</h1>";
+    }
+
+    public function listar()
+    {
+        echo "<h1>Listar!</h1>";
+    }
+
+    public function adicionar()
+    {
+        echo "<h1>Adicionar!</h1>";
+    }
+
+    public function editar()
+    {
+        echo "<h1>Editar!</h1>";
+    }
+
+    public function remover()
+    {
+        echo "<h1>Remover!</h1>";
+    }
+}

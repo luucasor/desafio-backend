@@ -1,17 +1,36 @@
 <?php
 
-header('Content-Type: text/html; charset=utf-8');
+error_reporting(E_ALL);
 
-$app = new \Phalcon\Mvc\Micro();
+use Phalcon\Mvc\Application;
+use Phalcon\Config\Adapter\Ini as ConfigIni;
 
-$app->get('/', function () {
-    echo '<h1>Show de bola! Parabéns.</h1>';
-    echo '<p>Você já conseguiu fazer o projeto base rodar. Agora, bora desenvolver a agenda :)</p>';
-});
+try {
+    define('APP_PATH', realpath('..') . '/');
 
-$app->notFound(function () use ($app) {
-    $app->response->setStatusCode(404, 'Not Found')->sendHeaders();
-    echo 'A página que você solicitou não existe.';
-});
+    /**
+     * Read the configuration
+     */
+    $config = new ConfigIni(APP_PATH . 'app/config/config.ini');
 
-$app->handle();
+    /**
+     * Read auto-loader
+     */
+    include APP_PATH . "/app/config/loader.php";
+
+    /**
+     * Read services
+     */
+    include APP_PATH . "/app/config/services.php";
+
+    /**
+     * Handle the request
+     */
+    $application = new Application($di);
+
+    echo $application->handle()->getContent();
+
+} catch (Exception $e) {
+    echo $e->getMessage() . '<br>';
+    echo '<pre>' . $e->getTraceAsString() . '</pre>';
+}
